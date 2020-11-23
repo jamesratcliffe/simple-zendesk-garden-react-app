@@ -1,0 +1,4 @@
+.cache
+node_modules
+public/assets/index.js
+public/assets/index.js.map

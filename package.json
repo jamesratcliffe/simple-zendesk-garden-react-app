@@ -1,0 +1,24 @@
+{
+  "name": "sync-toolbox",
+  "version": "1.0.0",
+  "description": "Salesforce Sync Toolbox",
+  "main": "public/assets/index.html",
+  "author": "James Ratcliffe",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "watch": "parcel watch src/index.js --out-dir public/assets",
+    "build": "parcel build src/index.js --out-dir public/assets",
+    "start": "cd public; zat serve"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
+}
