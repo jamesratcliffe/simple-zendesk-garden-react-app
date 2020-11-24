@@ -6,3 +6,4 @@ dist/assets/index.css
 dist/assets/index.css.map
 .idea/workspace.xml
 .idea/dictionaries
+yarn.lock
