@@ -27,26 +27,26 @@ These scripts build the app in the `dist/assets` directory. If you want to run `
 
 ### Build for Development
 
-Faster. Compiled files are (relatively) readable.
-
-```shell script
-$ yarn build
-```
-
-### Build and Watch for Changes
-
-Same as above, but parcel will re-build if you update a source file.
+Parcel will re-build if you update a source file.
 
 ```shell script
 $ yarn watch
 ```
 
-### Serve App for Zendesk
+### Serve App Locally for Zendesk
 
 This serves the app from the `dist` directory using zcli. Add `?zcli_apps=true` to the end of your Zendesk URL to see the app in Zendesk.
 
 ```shell script
 $ yarn serve
+```
+
+### Build for Production
+
+Output files are minified.
+
+```shell script
+$ yarn build
 ```
 
 ## Running the App Locally
