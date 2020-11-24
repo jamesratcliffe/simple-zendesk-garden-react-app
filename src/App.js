@@ -1,12 +1,13 @@
 import React from 'react';
-import client from './client.js'
+import Zendesk from './lib/Zendesk';
 
 function App() {
-  const [userName, setUserName] = React.useState(0);
+  const [userName, setUserName] = React.useState('');
 
-  React.useEffect(async () => {
-    const data = await client.get('currentUser');
-    setUserName(data.currentUser.name);
+  React.useEffect(() => {
+    (async () => {
+      setUserName(await Zendesk.getCurrentUserName());
+    })();
   });
 
   return (
