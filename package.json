@@ -2,14 +2,14 @@
   "name": "simple-zendesk-garden-react-app",
   "version": "1.0.0",
   "description": "A simple Zendesk app template using React and Zendesk Garden",
-  "main": "public/assets/index.html",
+  "main": "dist/assets/index.html",
   "author": "James Ratcliffe",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "watch": "parcel watch src/index.js --out-dir public/assets",
-    "build": "parcel build src/index.js --out-dir public/assets",
-    "start": "cd public; zat serve"
+    "watch": "parcel watch src/index.js --out-dir dist/assets",
+    "build": "parcel build src/index.js --out-dir dist/assets",
+    "start": "cd dist; zat serve"
   },
   "dependencies": {
     "@zendeskgarden/css-bedrock": "^8.0.1",

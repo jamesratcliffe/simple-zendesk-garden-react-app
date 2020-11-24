@@ -1,8 +1,8 @@
 .cache
 node_modules
-public/assets/index.js
-public/assets/index.js.map
-public/assets/index.css
-public/assets/index.css.map
+dist/assets/index.js
+dist/assets/index.js.map
+dist/assets/index.css
+dist/assets/index.css.map
 .idea/workspace.xml
 .idea/dictionaries
