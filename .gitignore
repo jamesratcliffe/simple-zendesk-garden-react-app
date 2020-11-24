@@ -1,9 +1,9 @@
 .cache
 node_modules
-dist/assets/index.js
-dist/assets/index.js.map
-dist/assets/index.css
-dist/assets/index.css.map
+dist/assets/
+!dist/assets/index.html
+!dist/assets/logo.png
+!dist/assets/logo-small.png
 .idea/workspace.xml
 .idea/dictionaries
 yarn.lock
