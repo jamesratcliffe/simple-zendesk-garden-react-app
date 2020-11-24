@@ -12,8 +12,14 @@
     "start": "cd public; zat serve"
   },
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@zendeskgarden/css-bedrock": "^8.0.1",
+    "@zendeskgarden/react-buttons": "^8.28.0",
+    "@zendeskgarden/react-theming": "^8.1.0",
+    "@zendeskgarden/react-typography": "^8.28.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "styled-components": "^4.2.0 || ^5.0.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
