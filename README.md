@@ -2,14 +2,12 @@
 
 ## Global Setup
 
-1. [Install Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048).
-1. [Install Node](https://nodejs.org/en/download/).
-2. [Install Yarn](https://yarnpkg.com/getting-started/install).
-3. Install Parcel:
+Install the following if you haven't already.
 
-```shell script
-yarn global add parcel-bundler
-```
+- [Node](https://nodejs.org/en/download/)
+- [Yarn](https://yarnpkg.com/getting-started/install)
+- [Parcel](https://parceljs.org/getting_started.html)
+- [Zendesk CLI](https://github.com/zendesk/zcli)
 
 ## Package Setup
 
@@ -21,7 +19,7 @@ $ cd simple-zendesk-garden-react-app
 $ yarn
 ```
 
-## Building and Serving
+## Scripts
 
 You can use these scripts defined in `package.json`.
 
@@ -45,7 +43,13 @@ $ yarn watch
 
 ### Serve App for Zendesk
 
+This serves the app from the `dist` directory using zcli. Add `?zcli_apps=true` to the end of your Zendesk URL to see the app in Zendesk.
+
 ```shell script
 $ yarn serve
 ```
+
+## Running the App Locally
+
+To test your app locally, run `yarn watch` and `yarn serve` at the same time in two different terminals. You can set up some IDEs and editors to do this for you with one click. 
 
