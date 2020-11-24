@@ -52,4 +52,3 @@ $ yarn serve
 ## Running the App Locally
 
 To test your app locally, run `yarn watch` and `yarn serve` at the same time in two different terminals. You can set up some IDEs and editors to do this for you with one click. 
-
