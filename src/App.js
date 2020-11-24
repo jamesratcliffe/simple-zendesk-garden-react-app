@@ -16,7 +16,7 @@ function App() {
 
   return (
       <ThemeProvider>
-        <Header tag="h1">{userName}</Header>
+        <Header tag="h1">Hi, {userName}</Header>
         <Button>Example Garden button</Button>
       </ThemeProvider>
   );
