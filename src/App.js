@@ -21,8 +21,10 @@ function App() {
       <ThemeProvider>
         <Grid>
           <Row><Header tag="h1">Hi, {userName}</Header></Row>
-          <Row><Button>Button</Button></Row>
-          <Row><ZendeskWordmark/></Row>
+          <Row justifyContent="between">
+            <ZendeskWordmark color="green"/>
+            <Button>Button</Button>
+          </Row>
         </Grid>
       </ThemeProvider>
   );
