@@ -1,3 +1,8 @@
+/*
+Here we can write methods that interact with the Zendesk Apps Framework to not
+have them clutter up App.js.
+ */
+
 let client;
 
 if (typeof ZAFClient === 'undefined') {

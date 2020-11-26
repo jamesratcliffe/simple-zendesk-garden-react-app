@@ -8,6 +8,16 @@ import {Header} from './Components/Typography';
 import Zendesk from './lib/Zendesk';
 import '@zendeskgarden/css-bedrock';
 
+/*
+Little example Zendesk app with React and Zendesk Garden.
+
+See the React docs on Hooks for more info about useState() and useEffect().
+  https://reactjs.org/docs/hooks-intro.html
+
+We're able to use an SVG file as a React component by installing the
+@svgr/parcel-plugin-svgr package.
+ */
+
 function App() {
   const [userName, setUserName] = React.useState('');
 
@@ -15,7 +25,7 @@ function App() {
     (async () => {
       setUserName(await Zendesk.getCurrentUserName());
     })();
-  });
+  }, []); // The deps array is empty because the current user won't change
 
   return (
       <ThemeProvider>
