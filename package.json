@@ -9,7 +9,10 @@
     "scripts": {
         "watch": "parcel watch src/index.js --out-dir dist/assets",
         "build": "parcel build src/index.js --out-dir dist/assets",
-        "serve": "zcli apps:server dist"
+        "serve": "zcli apps:server dist",
+        "bump": "bash scripts/bump_all.sh",
+        "package": "yarn build && zcli apps:package dist && zcli apps:clean dist",
+        "update": "yarn build && zcli apps:update"
     },
     "dependencies": {
         "@svgr/parcel-plugin-svgr": "^5.5.0",
