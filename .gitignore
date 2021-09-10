@@ -4,6 +4,8 @@ dist/assets/
 !dist/assets/index.html
 !dist/assets/logo.png
 !dist/assets/logo-small.png
+tmp
+zcli.apps.config.json
 .idea/workspace.xml
 .idea/dictionaries
-yarn.lock
+.idea
