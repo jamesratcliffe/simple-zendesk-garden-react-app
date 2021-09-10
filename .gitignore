@@ -1,9 +1,6 @@
 .cache
 node_modules
 dist/assets/
-!dist/assets/index.html
-!dist/assets/logo.png
-!dist/assets/logo-small.png
 tmp
 zcli.apps.config.json
 .idea/workspace.xml
