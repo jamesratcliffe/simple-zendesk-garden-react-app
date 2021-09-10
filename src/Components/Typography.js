@@ -12,8 +12,6 @@ the component's props so we can get a spacing value from the Zendesk Garden
 theme.
  */
 
-const Header = styled(XXL)`
+export const Header = styled(XXL)`
   margin-bottom: ${props => props.theme.space.md};
 `;
-
-exports.Header = Header;
