@@ -1,15 +1,12 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ThemeProvider } from '@zendeskgarden/react-theming';
-import { Button } from '@zendeskgarden/react-buttons';
-import { Grid, Row } from '@zendeskgarden/react-grid';
-import ZendeskWordmark
-  from '@zendeskgarden/svg-icons/src/26/wordmark-zendesk.svg';
+import { Grid } from '@zendeskgarden/react-grid';
 import Theme from './components/Theme';
-import { Header } from './components/Typography';
 import '@zendeskgarden/css-bedrock';
-import useCurrentUser from './hooks/zendesk/useCurrentUser';
 import useDynamicAppHeight from './hooks/zendesk/useDynamicAppHeight';
+import { Greeting } from './components/Greeting';
+import GardenDemo from './components/ComponentDemo';
 
 /*
 Little example Zendesk app with React and Zendesk Garden.
@@ -36,7 +33,6 @@ const queryClient = new QueryClient({
 
 const App = () => {
   const appHeightRef = useDynamicAppHeight();
-  const { isSuccess: userIsLoaded, data: currentUser } = useCurrentUser();
 
   return (
       <QueryClientProvider
@@ -45,15 +41,8 @@ const App = () => {
           <div className="main"
                ref={appHeightRef}> {/* This div will change height dynamically to fit its content */}
             <Grid>
-              {userIsLoaded && (
-                  <Row>
-                    <Header tag="h1">Hi, {currentUser.name}</Header>
-                  </Row>
-              )}
-              <Row justifyContent="between">
-                <ZendeskWordmark color="green"/>
-                <Button>Button</Button>
-              </Row>
+              <Greeting/>
+              <GardenDemo/>
             </Grid>
           </div>
         </ThemeProvider>
