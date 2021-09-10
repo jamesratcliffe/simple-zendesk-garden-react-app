@@ -13,12 +13,10 @@ import { zendeskClient } from '../../lib/Zendesk';
  *
  * @returns {object}
  */
-const useCurrentUser = () => {
-  const query = useQuery('currentUser', async () => {
-    /** @type ZAFUser */
-    const { currentUser } = await zendeskClient.get('currentUser');
-    return currentUser;
-  });
-};
+const useCurrentUser = () => useQuery('currentUser', async () => {
+  /** @type ZAFUser */
+  const { currentUser } = await zendeskClient.get('currentUser');
+  return currentUser;
+});
 
 export default useCurrentUser;
