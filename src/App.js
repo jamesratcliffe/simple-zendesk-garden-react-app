@@ -5,8 +5,9 @@ import {Grid, Row} from '@zendeskgarden/react-grid';
 import ZendeskWordmark
   from '@zendeskgarden/svg-icons/src/26/wordmark-zendesk.svg';
 import {Header} from './Components/Typography';
-import Zendesk from './lib/Zendesk';
 import '@zendeskgarden/css-bedrock';
+import useCurrentUser from './hooks/zendesk/useCurrentUser';
+import useDynamicAppHeight from './hooks/zendesk/useDynamicAppHeight';
 
 /*
 Little example Zendesk app with React and Zendesk Garden.
@@ -19,23 +20,25 @@ We're able to use an SVG file as a React component by installing the
  */
 
 function App() {
-  const [userName, setUserName] = React.useState('');
-
-  React.useEffect(() => {
-    (async () => {
-      setUserName(await Zendesk.getCurrentUserName());
-    })();
-  }, []); // The deps array is empty because the current user won't change
+  const appHeightRef = useDynamicAppHeight();
+  const { isSuccess: userIsLoaded, data: currentUser } = useCurrentUser();
 
   return (
       <ThemeProvider>
-        <Grid>
-          <Row><Header tag="h1">Hi, {userName}</Header></Row>
-          <Row justifyContent="between">
-            <ZendeskWordmark color="green"/>
-            <Button>Button</Button>
-          </Row>
-        </Grid>
+        {/* This div will change height dynamically to fit its content */}
+        <div className="main" ref={appHeightRef}>
+          <Grid>
+            {userIsLoaded && (
+                <Row>
+                  <Header tag="h1">Hi, {currentUser.name}</Header>
+                </Row>
+            )}
+            <Row justifyContent="between">
+              <ZendeskWordmark color="green"/>
+              <Button>Button</Button>
+            </Row>
+          </Grid>
+        </div>
       </ThemeProvider>
   );
 }
