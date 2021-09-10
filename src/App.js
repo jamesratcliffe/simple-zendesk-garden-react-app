@@ -1,10 +1,10 @@
 import React from 'react';
-import {ThemeProvider} from '@zendeskgarden/react-theming';
-import {Button} from '@zendeskgarden/react-buttons';
-import {Grid, Row} from '@zendeskgarden/react-grid';
+import { ThemeProvider } from '@zendeskgarden/react-theming';
+import { Button } from '@zendeskgarden/react-buttons';
+import { Grid, Row } from '@zendeskgarden/react-grid';
 import ZendeskWordmark
   from '@zendeskgarden/svg-icons/src/26/wordmark-zendesk.svg';
-import {Header} from './Components/Typography';
+import { Header } from './components/Typography';
 import '@zendeskgarden/css-bedrock';
 import useCurrentUser from './hooks/zendesk/useCurrentUser';
 import useDynamicAppHeight from './hooks/zendesk/useDynamicAppHeight';
